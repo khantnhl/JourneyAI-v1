@@ -93,6 +93,8 @@ function GenerateDestinationPage() {
                         body: JSON.stringify({ location: planData.city })
                     });
 
+                    console.log("mapbox response : ", response)
+                    
                     if (!response.ok) {
                         throw new Error(`HTTP error! status: ${response.status}`);
                     }
@@ -130,6 +132,8 @@ function GenerateDestinationPage() {
                 essential: true
             });
         }
+
+
 
         if (coordArray?.length > 0)
             {

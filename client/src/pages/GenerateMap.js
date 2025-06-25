@@ -10,7 +10,7 @@ const port = 5000;
 mapboxgl.accessToken = process.env.REACT_APP_MAP_BOX;
 
 if(!mapboxgl.accessToken){
-    throw new Error("MAPBOX API KEY")
+    throw new Error("MAPBOX access token missing")
 }
 
 // initialize map obj with CTOR
@@ -71,6 +71,10 @@ function GenerateMap() {
                 }
 
                 const data = await response.json();
+
+
+                console.log("generate map: ", data)
+
                 setCenter(data.center);
                 setZoom(data.zoom);
 
@@ -105,17 +109,18 @@ function GenerateMap() {
         }
 
     
-       
-        if (coordArray?.length > 0)
-        {
-            coordArray.forEach(coord => {
-                const lngLat = {lng : coord.lng, lat : coord.lat };
+    //    console.log("coordArray : ", coordArray)
+
+    //     if (coordArray?.length > 0)
+    //     {
+    //         coordArray.forEach(coord => {
+    //             const lngLat = {lng : coord.lng, lat : coord.lat };
                 
-                const marker = new mapboxgl.Marker({color: 'red'});
-                marker.setLngLat(lngLat);
-                marker.addTo(map_obj.current);
-            });
-        }
+    //             const marker = new mapboxgl.Marker({color: 'red'});
+    //             marker.setLngLat(lngLat);
+    //             marker.addTo(map_obj.current);
+    //         });
+    //     }
         
     
     }, [center, zoom, coordArray]);
