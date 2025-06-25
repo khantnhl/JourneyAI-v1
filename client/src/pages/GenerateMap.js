@@ -9,6 +9,10 @@ const port = 5000;
 // public token
 mapboxgl.accessToken = process.env.REACT_APP_MAP_BOX;
 
+if(!mapboxgl.accessToken){
+    throw new Error("MAPBOX API KEY")
+}
+
 // initialize map obj with CTOR
 const init_map = (map_ref) => {
     return new mapboxgl.Map({
