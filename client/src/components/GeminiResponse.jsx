@@ -13,7 +13,7 @@ function GeminiResponse({ command, setLoading, onDataReceived }) {
             try {
                 setLoading(true);
 
-                const response = await fetch(`https://journey-ai-v1-server.vercel.app/api/gemini/gemini_response`, {
+                const response = await fetch(`http://localhost:${port}/api/gemini/gemini_response`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"

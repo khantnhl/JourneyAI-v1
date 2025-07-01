@@ -9,10 +9,6 @@ const port = 5000;
 // public token
 mapboxgl.accessToken = process.env.REACT_APP_MAP_BOX;
 
-if(!mapboxgl.accessToken){
-    throw new Error("MAPBOX access token missing")
-}
-
 // initialize map obj with CTOR
 const init_map = (map_ref) => {
     return new mapboxgl.Map({
@@ -39,10 +35,13 @@ function GenerateMap() {
             const extractCoord = []
             parsed.itinerary.forEach(day => {
                 day.activities.forEach(activity => {
-                    extractCoord.push(activity.place_detail.location);
+                    const { lng, lat } = activity.place_detail.location;
+                    if (!isNaN(lng) && !isNaN(lat)) {
+                        extractCoord.push(activity.place_detail.location);
+                    }
                 })
             })
-
+            console.log(extractCoord)
             setCoordArray(extractCoord)
 
 
@@ -58,7 +57,7 @@ function GenerateMap() {
     useEffect(() => {
         const fetchMapData = async () => {
             try {
-                const response = await fetch(`https://journey-ai-v1-server.vercel.app/api/mapbox/map`, {
+                const response = await fetch(`http://localhost:${port}/api/mapbox/map`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
@@ -71,10 +70,6 @@ function GenerateMap() {
                 }
 
                 const data = await response.json();
-
-
-                console.log("generate map: ", data)
-
                 setCenter(data.center);
                 setZoom(data.zoom);
 
@@ -109,18 +104,17 @@ function GenerateMap() {
         }
 
     
-    //    console.log("coordArray : ", coordArray)
-
-    //     if (coordArray?.length > 0)
-    //     {
-    //         coordArray.forEach(coord => {
-    //             const lngLat = {lng : coord.lng, lat : coord.lat };
+       
+        if (coordArray?.length > 0)
+        {
+            coordArray.forEach(coord => {
+                const lngLat = {lng : coord.lng, lat : coord.lat };
                 
-    //             const marker = new mapboxgl.Marker({color: 'red'});
-    //             marker.setLngLat(lngLat);
-    //             marker.addTo(map_obj.current);
-    //         });
-    //     }
+                const marker = new mapboxgl.Marker({color: 'red'});
+                marker.setLngLat(lngLat);
+                marker.addTo(map_obj.current);
+            });
+        }
         
     
     }, [center, zoom, coordArray]);
