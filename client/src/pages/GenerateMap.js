@@ -58,7 +58,7 @@ function GenerateMap() {
     useEffect(() => {
         const fetchMapData = async () => {
             try {
-                const response = await fetch(`http://localhost:${port}/api/mapbox/map`, {
+                const response = await fetch(`https://journey-ai-v1-server.vercel.app/api/mapbox/map`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json"
