@@ -34,7 +34,7 @@ Strip for Payments
 2. Gemini API processes in the backend and returns a complete travel plan along with estimated costs.
 3. Users can view, edit, or create account to save favourite plans.
 
-![Trip planning](./assets/trips.png) 
+![Trip planning](./assets/places.png) 
 
 ## Team:
 Khant Nyi Hlaing <br> 
