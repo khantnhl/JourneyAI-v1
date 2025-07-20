@@ -34,3 +34,8 @@ Google Places & Photos API
 3. Users can view, edit, or create account to save favourite plans.
 
 ![Trip planning](./assets/trips.png) 
+
+## Team:
+Khant Nyi Hlaing 
+Gayvalin Sujaritchai 
+Nhan Tri Danh 
