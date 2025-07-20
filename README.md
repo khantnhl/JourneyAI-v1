@@ -21,11 +21,11 @@ JourneyAI is a smart travel planning web application that leverages Google Gemin
 ![Map ](./assets/trips.png) 
 
 ## 🔧 Tech Stack
-React
-Tailwind
-FirebaseDB
-Gemini
-Google Places & Photos API
+React <br>
+Tailwind <br>
+FirebaseDB <br>
+Gemini <br>
+Google Places & Photos API 
 
 ## 🚀 How It Works
 
@@ -36,6 +36,6 @@ Google Places & Photos API
 ![Trip planning](./assets/trips.png) 
 
 ## Team:
-Khant Nyi Hlaing 
-Gayvalin Sujaritchai 
+Khant Nyi Hlaing <br> 
+Gayvalin Sujaritchai <br>
 Nhan Tri Danh 
