@@ -25,7 +25,8 @@ React <br>
 Tailwind <br>
 FirebaseDB <br>
 Gemini <br>
-Google Places & Photos API 
+Google Places & Photos API <br>
+Strip for Payments 
 
 ## 🚀 How It Works
 
