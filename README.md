@@ -47,9 +47,9 @@ JourneyAI is a smart travel planning web application that leverages Google Gemin
 
 ## 📈 Impact
 
-- 👥 Over **7000 users** actively engaged.
-- 🧭 Helped track **100+ missing individuals** within the first week.
-- 🕊️ Used by volunteers and community organizations to coordinate aid.
+- 👥 Plan your trips with one click.
+- 🧭 Save hours and avoid brain fog while planning trips with friends and families.
+- 🕊️ Save money and make the best memories.
 
 ---
 
