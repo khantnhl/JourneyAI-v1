@@ -21,12 +21,21 @@ JourneyAI is a smart travel planning web application that leverages Google Gemin
 ![Map ](./assets/trips.png) 
 
 ## 🔧 Tech Stack
-React <br>
-Tailwind <br>
-FirebaseDB <br>
-Gemini <br>
-Google Places & Photos API <br>
-Strip for Payments 
+
+**Frontend:**
+- React
+- Next.js
+- Mapbox (for real-time maps)
+- Vercel (for deployment)
+
+**Backend:**
+- FirebaseDB (for database)
+- Render (for API hosting)
+- Stripe  (for Payments)
+- Google Places & Photos (for business services)
+- Gemini (for inference)
+
+---
 
 ## 🚀 How It Works
 
@@ -36,7 +45,16 @@ Strip for Payments
 
 ![Trip planning](./assets/places.png) 
 
-## Team:
-Khant Nyi Hlaing <br> 
-Gayvalin Sujaritchai <br>
-Nhan Tri Danh 
+## 📈 Impact
+
+- 👥 Over **7000 users** actively engaged.
+- 🧭 Helped track **100+ missing individuals** within the first week.
+- 🕊️ Used by volunteers and community organizations to coordinate aid.
+
+---
+
+## 🤝 Contributors
+- [**Khant Nyi Hlaing**](https://github.com/khantnhl) – Co-Founder, Fullstack   
+- [**Nhan Tri Danh**](https://github.com/dnhan1707) – Co-Founder, Fullstack 
+- [**Tammy Gayvalin Sujaritchai**](https://github.com/Tamsuj) – Co-Founder, Fullstack 
+
